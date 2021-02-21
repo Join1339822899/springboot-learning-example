@@ -1,11 +1,13 @@
 package org.spring.springboot.controller;
 
-import org.spring.springboot.domain.City;
+import org.spring.springboot.pojo.City;
+import org.spring.springboot.pojo.User;
 import org.spring.springboot.service.CityService;
+import org.spring.springboot.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -43,4 +45,10 @@ public class CityRestController {
     public void modifyCity(@PathVariable("id") Long id) {
         cityService.deleteCity(id);
     }
+
+    @RequestMapping(value = "/api/test" ,method = RequestMethod.GET)
+    public ArrayList<User> test(){
+        return cityService.list();
+    }
+
 }

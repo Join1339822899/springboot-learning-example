@@ -1,7 +1,9 @@
 package org.spring.springboot.service;
 
-import org.spring.springboot.domain.City;
+import org.spring.springboot.pojo.City;
+import org.spring.springboot.pojo.User;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -49,4 +51,6 @@ public interface CityService {
      * @return
      */
     Long deleteCity(Long id);
+
+    ArrayList<User> list();
 }

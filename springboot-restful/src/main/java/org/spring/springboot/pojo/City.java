@@ -1,4 +1,5 @@
-package org.spring.springboot.domain;
+package org.spring.springboot.pojo;
+
 
 /**
  * 城市实体类
